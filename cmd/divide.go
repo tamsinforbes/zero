@@ -12,7 +12,7 @@ var divideCmd = &cobra.Command{
     Long:    "Carry out division operation on 2 numbers",
     Args:    cobra.ExactArgs(2),
     RunE: func(cmd *cobra.Command, args []string) error {
-        err, res := Divide(args[0], args[1], shouldRoundUp)
+        res, err := Divide(args[0], args[1], shouldRoundUp)
         if err != nil {
             return err
         }
